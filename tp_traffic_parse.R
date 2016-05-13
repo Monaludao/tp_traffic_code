@@ -1,8 +1,8 @@
 traffic_data_compile<-function(){
   library(reshape2)
   
-  data.root<-"./data/"
-  output.path<-"./output/"
+  data.root<-"../tp_traffic_data/"
+  output.path<-"../tp_traffic_output/"
   file.list<-dir(data.root)[grepl("(0|5).csv$",dir(data.root))]
   
   print("loading data...")
@@ -46,7 +46,7 @@ traffic_graph<-function(SectionId){
  
   if(is.null(SectionId)) stop("please input SectionId")
   
-  output.path<-"./output/"
+  output.path<-"../tp_traffic_output/"
   output.name<-max(dir(output.path)[grepl("output",dir(output.path))])
   output.time<-format(Sys.time(),"%Y%m%d%H%M")
   
