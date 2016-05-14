@@ -1,7 +1,7 @@
 traffic_data_compile<-function(){
   library(reshape2)
   
-  data.root<-"../tp_traffic_data/"
+  data.root<-"../tp_traffic_data/data/"
   output.path<-"../tp_traffic_output/"
   file.list<-dir(data.root)[grepl("(0|5).csv$",dir(data.root))]
   

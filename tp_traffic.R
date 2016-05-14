@@ -48,7 +48,7 @@ tp_traffic_dl <- function () {
     json.df$date<-as.Date(record.time,tz="Asia/Taipei")
     json.df$time<-format(record.time,"%H_%M")
     
-    data.path<-paste0("../tp_traffic_data/",json.df$date[1],"_",json.df$time[1],".csv")
+    data.path<-paste0("../tp_traffic_data/data/",json.df$date[1],"_",json.df$time[1],".csv")
     write.csv(json.df,data.path)
     print(data.path)
 }
